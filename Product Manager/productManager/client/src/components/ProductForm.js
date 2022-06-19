@@ -17,6 +17,13 @@ export default () => {
         })
             .then(res=>console.log(res))
             .catch(err=>console.log(err))
+            clearState()
+    }
+
+    const clearState=()=>{
+        setTitle("");
+        setPrice("");
+        setDescription("");
     }
     //onChange to update title price and discription
     return (
