@@ -22,7 +22,7 @@ const ProductList = (props) => {
     const goTo=(id)=>{
         console.log("***************")
         console.log("/api/products/"+id)
-        history.push("/api/products/"+id)
+        history.push("/products/"+id)
     }
 
     return (

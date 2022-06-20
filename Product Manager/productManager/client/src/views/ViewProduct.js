@@ -10,7 +10,7 @@ const ViewProduct = (props) => {
     const { id } = useParams();
     const { removeFromDom } = props;
     const goTo=(e)=>{
-        {history.push("/api/products/"+id+"/edit")}
+        {history.push("/products/"+id+"/edit")}
     }
     
     // const deleteThis = (productId) => {

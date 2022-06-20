@@ -41,10 +41,10 @@ useEffect(()=>{
           <Main  removeFromDom={removeFromDom} products={products} loaded={loaded} 
             addProduct={addProduct}/>
         </Route>
-        <Route exact path="/api/products/:id">
+        <Route exact path="/products/:id">
           <ViewProduct removeFromDom={removeFromDom}/>
         </Route>
-        <Route exact path="/api/products/:id/edit">
+        <Route exact path="/products/:id/edit">
           <Update />
         </Route>
       </Switch>
