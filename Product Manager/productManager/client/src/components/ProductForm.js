@@ -2,22 +2,24 @@ import React, { useState } from 'react'
 import axios from 'axios';
 export default (props) => {
     //keep track of what is being typed via useState hook
-    const [title, setTitle] = useState(""); 
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
+    const { initialTitle, initialPrice, initialDescription, addProduct} = props;
+    const [title, setTitle] = useState(initialTitle); 
+    const [price, setPrice] = useState(initialPrice);
+    const [description, setDescription] = useState(initialDescription);
     //handler when the form is submitted
     const onSubmitHandler = e => {
-        //prevent default behavior of the submit
+        
         e.preventDefault();
-        //make a post request to create a new product
-        axios.post('http://localhost:8000/api/product', {
-            title,
-            price,
-            description
-        })
-            .then(res=>console.log(res))
-            .then(props.addProduct({title, price, description}))
-            .catch(err=>console.log(err))
+        // make a post request to create a new product
+        // axios.post('http://localhost:8000/api/product', {
+        //     title,
+        //     price,
+        //     description
+        // })
+            // .then(res=>console.log(res))
+            // .then(props.addProduct({title, price, description}))
+            // .catch(err=>console.log(err))
+            addProduct({title, price, description});
             clearState()
     }
 

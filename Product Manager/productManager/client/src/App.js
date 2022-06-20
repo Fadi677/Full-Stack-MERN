@@ -27,7 +27,10 @@ useEffect(()=>{
 },[products]);
 
   const addProduct=(productObject)=>{
-    setProducts([...products, productObject])
+    axios.post('http://localhost:8000/api/product', productObject)
+    .then(res=>{
+      setProducts([...products, res.data])
+    })
   }
 
   return (
