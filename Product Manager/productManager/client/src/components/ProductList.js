@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 import DeleteButton from './DeleteButton';
@@ -19,6 +19,7 @@ const ProductList = (props) => {
     // const goTo=(e)=>{
     //     {props.products.map((product, i)=>history.push("/api/products/"+product._id))}
     // }
+    
     const goTo=(id)=>{
         console.log("***************")
         console.log("/api/products/"+id)
