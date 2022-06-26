@@ -22,7 +22,7 @@ module.exports.getAuthor=(request, response)=>{
 }
 
 module.exports.updateAuthor=(request, response)=>{
-    Author.findOneAndUpdate({_id: request.params.id}, request.body)
+    Author.findOneAndUpdate({_id: request.params.id}, request.body, {new:true})
     .then(updateAuthor=>response.json(updateAuthor))
     .catch(err=>response.status(400).json(err))
 }

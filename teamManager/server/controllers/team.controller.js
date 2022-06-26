@@ -13,10 +13,13 @@ module.exports.deletePlayer=(request, response)=>{
 }
 
 module.exports.createPlayer=(request, response)=>{
-    const  { playerName, preferredPosition }=request.body;
+    const  { playerName, preferredPosition, status1, status2, status3 }=request.body;
     Team.create({
         playerName,
-        preferredPosition
+        preferredPosition,
+        status1,
+        status2,
+        status3
     })
     .then(player=>response.json(player))
     .catch(err=>response.status(400).json(err));
