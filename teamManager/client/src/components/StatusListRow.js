@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
+import '../Style.css'
 
 const StatusListRow = (props) => {
     const{gameNum, player, updatePlayer}=props;
@@ -67,9 +68,9 @@ const StatusListRow = (props) => {
     }
 
     return (
-        <tr>
-            <td>{props.player.playerName}</td>
-            <td><button value='Playing' style={{background:btn1}} onClick={statusHandler}>Playing</button> <button value='Not Playing' style={{background:btn2}} onClick={statusHandler}>Not Playing</button> <button value='Undecided' style={{background:btn3}} onClick={statusHandler}>Undecided</button></td>
+        <tr >
+            <td id="tdS">{props.player.playerName}</td>
+            <td className="tdS2"><button  value='Playing' style={{background:btn1}} onClick={statusHandler}>Playing</button> <button value='Not Playing' style={{background:btn2}} onClick={statusHandler}>Not Playing</button> <button value='Undecided' style={{background:btn3}} onClick={statusHandler}>Undecided</button></td>
         </tr>
     )
 }

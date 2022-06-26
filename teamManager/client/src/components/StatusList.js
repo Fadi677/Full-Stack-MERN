@@ -1,6 +1,7 @@
 import React from 'react'
 import StatusListRow from './StatusListRow'
 import {Link, useParams} from "react-router-dom";
+import '../Style.css';
 
 const StatusList = (props) => {
 
@@ -18,7 +19,7 @@ const StatusList = (props) => {
             <tbody>
         {props.players.length>0 && props.players.map( (player, i) =>{
         return(
-        <StatusListRow updatePlayer={updatePlayer} gameNum={gameNum} player={player} key={i}/>
+        <StatusListRow id="tRow" updatePlayer={updatePlayer} gameNum={gameNum} player={player} key={i}/>
         )}
     )}
         </tbody>
