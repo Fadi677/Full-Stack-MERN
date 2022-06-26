@@ -19,7 +19,7 @@ const createPlayer = (playerName, preferredPosition) => {
     return (
     <div>
         <h2>Add Player</h2>
-        <Link to="/players/list">Manage Players</Link> | <Link to="/status">Manage Player Status</Link>
+        <Link to="/players/list">Manage Players</Link> | <Link to="/status/game/1">Manage Player Status</Link>
         <TeamForm submit={createPlayer} initialPlayer={{playerName:"", preferredPosition:""}} />
     </div>
     )
